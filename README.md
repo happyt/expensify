@@ -7,5 +7,7 @@ Andrew Mead demo
 - Setting up webpack
 - Babel packages
 - Styling w scss
+- Set up boilerplate v1
+- React Router
 
 
