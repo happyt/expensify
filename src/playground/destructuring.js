@@ -43,5 +43,5 @@ const address = ["Grant Way", "Isleworth", "Middlesex", "TW7 8QD"]
 console.log(`We are in ${address[1]}, ${address[2]} `)
 
 // OR
-const [  , city, county='Unknown', postcode] = address    // miss first item
-console.log(`We are in ${city}, ${county} `)
+const [  , cityA, countyA='Unknown', postcodeA] = address    // miss first item
+console.log(`We are in ${cityA}, ${countyA} `)
