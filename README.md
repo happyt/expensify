@@ -9,5 +9,6 @@ Andrew Mead demo
 - Styling w scss
 - Set up boilerplate v1
 - React Router
-
+- Redux notes in playground > redux101, 102
+- expensify basics in playground > react-expensify
 
