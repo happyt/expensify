@@ -11,4 +11,24 @@ Andrew Mead demo
 - React Router
 - Redux notes in playground > redux101, 102
 - expensify basics in playground > react-expensify
+- set up live directories
 
+Structure is,
+- actions
+  - expenses
+  - filters
+- components
+  - all screen components...
+- playground
+  - test files...
+- reducers
+  - expenses
+  - filters
+- routers
+  - AppRouter
+- selectors
+  - expenses - search functions using filters
+- store
+  - configureStore
+- styles
+  - various scss files for components
