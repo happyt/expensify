@@ -32,3 +32,11 @@ Structure is,
   - configureStore
 - styles
   - various scss files for components
+
+  - Use react-redux
+  - Set up connections
+  - Higher order components theory
+  - List items
+  - Search filter
+  - Delete Item
+  
