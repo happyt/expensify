@@ -5,18 +5,21 @@ import { Provider } from 'react-redux'
 import AppRouter from './routers/AppRouter'
 import configureStore from './store/configureStore'
 import {addExpense} from './actions/expenses'
-import {setTextFilter} from './actions/filters'
+import {setTextFilter, sortBy} from './actions/filters'
 import getVisibleExpenses from './selectors/expenses'
 import 'normalize.css/normalize.css'
 import './styles/styles.scss'
 
 const store = configureStore()
 
-store.dispatch(addExpense({ description: 'water bill', amount: 100, createdAt: 125 }))
-store.dispatch(addExpense({ description: 'gas bill', amount: 222, createdAt: 225 }))
-store.dispatch(addExpense({ description: 'gas bill', amount: 123, createdAt: 335 }))
+store.dispatch(addExpense({ description: 'water bill', amount: 10000, createdAt: 125 }))
+store.dispatch(addExpense({ description: 'gas bill', amount: 20200, createdAt: 225 }))
+store.dispatch(addExpense({ description: 'Rent', amount: 2220, createdAt: 225 }))
+store.dispatch(addExpense({ description: 'Coffee', amount: 222, createdAt: 99 }))
+store.dispatch(addExpense({ description: 'gas bill', amount: 12345, createdAt: 335 }))
 
-store.dispatch(setTextFilter('bill'))
+// store.dispatch(setTextFilter('bill'))
+store.dispatch(sortBy('Amount'))
 
 console.log(store.getState())
 

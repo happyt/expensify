@@ -9,7 +9,7 @@ export default (state = expensesReducerDefaultState, action) => {
                 action.expense
             ]
         case 'REMOVE_EXPENSE':
-            console.log('Id: ' + action.id)
+  //          console.log('Id: ' + action.id)
             return state.filter((exp) => {
                 return (action.id !== exp.id)
             })

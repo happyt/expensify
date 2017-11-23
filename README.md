@@ -39,4 +39,8 @@ Structure is,
   - List items
   - Search filter
   - Delete Item
+  - Create Item
+  - Edit Item
+  - Search on date ranges - using momentjs, react-dates
+
   
