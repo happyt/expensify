@@ -1,10 +1,10 @@
 // SET TEXT FILTER
-export const setTextFilter = (filter) => ({
+export const setTextFilter = (filter='') => ({
     type: 'SET_TEXT_FILTER',
     filter
 })
 // SORT BY
-export const sortBy = (text) => ({
+export const sortBy = (text = 'date') => ({
     type: 'SORT_BY',
     value: text
 })

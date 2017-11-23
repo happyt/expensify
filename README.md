@@ -33,14 +33,20 @@ Structure is,
 - styles
   - various scss files for components
 
-  - Use react-redux
-  - Set up connections
-  - Higher order components theory
-  - List items
-  - Search filter
-  - Delete Item
-  - Create Item
-  - Edit Item
-  - Search on date ranges - using momentjs, react-dates
+- Use react-redux
+- Set up connections
+- Higher order components theory
+- List items
+- Search filter
+- Delete Item
+- Create Item
+- Edit Item
+- Search on date ranges - using momentjs, react-dates
 
-  
+Notes
+===
+EditItem should really be UpdateItem
+Should always pass id as string
+The sortBy function is enough - allows other things on the list
+  - take out sortByDate, sortByAmount
+
