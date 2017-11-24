@@ -42,6 +42,14 @@ Structure is,
 - Create Item
 - Edit Item
 - Search on date ranges - using momentjs, react-dates
+- Added a numberof tests
+- Change webpack for production version
+- sort out and extract css files, with source maps
+
+
+
+
+
 
 Notes
 ===
