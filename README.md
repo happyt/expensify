@@ -47,10 +47,6 @@ Structure is,
 - sort out and extract css files, with source maps
 
 
-
-
-
-
 Notes
 ===
 EditItem should really be UpdateItem
