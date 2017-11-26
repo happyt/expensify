@@ -45,6 +45,10 @@ Structure is,
 - Added a numberof tests
 - Change webpack for production version
 - sort out and extract css files, with source maps
+- Summary lines, numeral, momentjs
+- Firebase connection
+- Promises
+- Connections to firebase
 
 
 Notes
