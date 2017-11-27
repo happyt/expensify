@@ -22,8 +22,8 @@ export const startAddExpense = (expenseData = {}) => {
                 id: ref.key,
                 ...expense
             }))
-    })
-}
+        })
+    }
 }
 
 // REMOVE ENTRY
