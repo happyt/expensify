@@ -49,6 +49,8 @@ Structure is,
 - Firebase connection
 - Promises
 - Connections to firebase
+- Events from Firebase
+
 
 
 Notes
