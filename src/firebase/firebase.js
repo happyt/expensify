@@ -1,14 +1,5 @@
 import * as firebase from 'firebase'
-
-// Initialize Firebase
-const config = {
-    apiKey: "AIzaSyAlvVB5Pt5TSOLR3EsjPavvrCVKSYLU73I",
-    authDomain: "expensifydd.firebaseapp.com",
-    databaseURL: "https://expensifydd.firebaseio.com",
-    projectId: "expensifydd",
-    storageBucket: "expensifydd.appspot.com",
-    messagingSenderId: "453765376364"
-};
+import config from '../config'
 
 firebase.initializeApp(config);
 const database = firebase.database()
@@ -21,7 +12,6 @@ export { firebase, database as default }
 //     amount: 12345,
 //     createdAt: 987654321
 // })
-
 
 
 // database.ref().set(

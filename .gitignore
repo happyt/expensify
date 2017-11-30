@@ -4,3 +4,4 @@ public/styles.css
 public/bundle.js.map
 public/styles.css.map
 .env
+/src/config.js
