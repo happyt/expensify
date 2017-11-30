@@ -8,11 +8,19 @@ class ExpenseListFilters extends React.Component {
         calendarFocused: null
     }
     onDatesChange = ({ startDate, endDate }) => {
-        this.props.dispatch(setStartDate(startDate))
-        this.props.dispatch(setEndDate(endDate))
+        this.props.setStartDate(startDate)
+        this.props.setEndDate(endDate)
     }
     onFocusChange =(calendarFocused) => {
         this.setState(() => ({ calendarFocused }))
+    }
+
+    onTextChange = (e) => {
+        this.props.setTextFilter(e.target.value)
+    }
+
+    onSortChange = (e) => {
+        this.props.sortBy(e.target.value)
     }
 
     render() {
@@ -20,13 +28,9 @@ class ExpenseListFilters extends React.Component {
         return (
             <div>
                 <input type='text' value={this.props.filters.text}
-                    onChange={(e) => {
-                        this.props.dispatch(setTextFilter(e.target.value))
-                    }} />
+                    onChange={this.onTextChange} />
                 <select value={this.props.filters.sortBy}
-                    onChange={(e) => {
-                        this.props.dispatch(sortBy(e.target.value))
-                    }} >
+                    onChange={this.onSortChange} >
                     <option value="date">Date</option>
                     <option value="amount">Amount</option>
                 </select>
@@ -45,9 +49,15 @@ class ExpenseListFilters extends React.Component {
     }
 }
 
-const mapStateToProps = (state) => {
-    return {
+const mapStateToProps = (state) => ({
         filters: state.filters
-    }
-}
-export default connect(mapStateToProps)(ExpenseListFilters)
+    })
+
+const mapDispatchToProps = (dispatch) => ({
+        setTextFilter: (text) => dispatch(setTextFilter(text)),
+        sortBy: (value) => dispatch(sortBy(value)),
+        setStartDate: (startDate) => dispatch(setStartDate(startDate)),
+        setEndDate: (endDate) => dispatch(setEndDate(endDate)),
+    })
+
+export default connect(mapStateToProps, mapDispatchToProps)(ExpenseListFilters)
