@@ -9,11 +9,12 @@ const config = {
     messagingSenderId : process.env.FIREBASE_SENDER_ID,
 }
 
-
 firebase.initializeApp(config);
+
 const database = firebase.database()
 
 export { firebase, database as default }
+
 
 // database.ref('expenses').push({
 //     description: 'phone bill',

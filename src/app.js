@@ -13,22 +13,22 @@ import './firebase/firebase'
 import 'react-dates/lib/css/_datepicker.css'
 
 const store = configureStore()
-console.log('test')
+// console.log('test')
 
-store.dispatch(addExpense({ description: 'water bill', amount: 10000, createdAt: 125 }))
-store.dispatch(addExpense({ description: 'gas bill', amount: 20200, createdAt: 225 }))
-store.dispatch(addExpense({ description: 'Rent', amount: 2220, createdAt: 225 }))
-store.dispatch(addExpense({ description: 'Coffee', amount: 222, createdAt: 99 }))
-store.dispatch(addExpense({ description: 'gas bill', amount: 12345, createdAt: 335 }))
+// store.dispatch(addExpense({ description: 'water bill', amount: 10000, createdAt: 125 }))
+// store.dispatch(addExpense({ description: 'gas bill', amount: 20200, createdAt: 225 }))
+// store.dispatch(addExpense({ description: 'Rent', amount: 2220, createdAt: 225 }))
+// store.dispatch(addExpense({ description: 'Coffee', amount: 222, createdAt: 99 }))
+// store.dispatch(addExpense({ description: 'gas bill', amount: 12345, createdAt: 335 }))
 
-// store.dispatch(setTextFilter('bill'))
-store.dispatch(sortBy('Amount'))
+// // store.dispatch(setTextFilter('bill'))
+// store.dispatch(sortBy('Amount'))
 
-console.log(store.getState())
+// console.log(store.getState())
 
-const state = store.getState()
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
-console.log(visibleExpenses)
+// const state = store.getState()
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters)
+// console.log(visibleExpenses)
 
 const jsx = (
     <Provider store={store}>
