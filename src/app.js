@@ -42,5 +42,3 @@ store.dispatch(startSetExpenses()).then(() => {
     ReactDOM.render(jsx, document.getElementById("app"))
 })
 
-
-// ReactDOM.render(<AppRouter />, document.getElementById("app"))
