@@ -1,47 +1,45 @@
-// Object restructuring
+//
+// Object destructuring
+//
 
-const person = {
-    name: "Andrew",
-    age: 26,
-    location: {
-        city: "london",
-        temp: 54
-    }
-}
-// const name = person.name;
-// const age = person.age
-// const city = person.location.city
+// const person = {
+//   name: 'Andrew',
+//   age: 27,
+//   location: {
+//     city: 'Philadelphia',
+//     temp: 88
+//   }
+// };
 
-// OR
-const {name, age } = person
+// const { name: firstName = 'Anonymous', age } = person;
+// console.log(`${firstName} is ${age}.`);
 
-console.log(`${name} is ${age}`)
-
-// More complex if want to test exists
-if (person.location.city && person.location.temp) {
-    console.log(`It's ${person.location.temp} in ${person.location.city}`)
-}
-
-// becomes
-// const { city, temp } = person.location
-// if (city && temp) {
-//     console.log(`It's ${temp} in ${city}`)
+// const { city, temp: temperature } = person.location;
+// if (city && temperature) {
+//   console.log(`It's ${temperature} in ${city}.`);
 // }
 
-// to rename
-const { city, temp: temperature } = person.location
-if (city && temperature) {
-   console.log(`It's ${temperature} in ${city}`)
-}
+// const book = {
+//   title: 'Ego is the Enemy',
+//   author: 'Ryan Holiday',
+//   publisher: {
+//     // name: 'Penguin'
+//   }
+// };
 
-// defaults with 
-const {name: firstName = "Anonymous", age: years} = person
-console.log(`${firstName} is ${years}`)
+// const { name: publisherName = 'Self-Published' } = book.publisher;
 
+// console.log(publisherName); // Penguin, Self-Published
+
+//
 // Array destructuring
-const address = ["Grant Way", "Isleworth", "Middlesex", "TW7 8QD"]
-console.log(`We are in ${address[1]}, ${address[2]} `)
+//
 
-// OR
-const [  , cityA, countyA='Unknown', postcodeA] = address    // miss first item
-console.log(`We are in ${cityA}, ${countyA} `)
+// const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
+// const [, city, state = 'New York'] = address;
+// console.log(`You are in ${city} ${state}.`);
+
+const item = ['Coffee (iced)', '$3.00', '$3.50', '$3.75'];
+const [itemName, , mediumPrice] = item;
+
+console.log(`A medium ${itemName} costs ${mediumPrice}`);

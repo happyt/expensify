@@ -1,71 +1,49 @@
-import { setTextFilter, setStartDate, setEndDate, sortBy } from '../../actions/filters'
-import moment from 'moment'
+import moment from 'moment';
+import {
+  setStartDate,
+  setEndDate,
+  setTextFilter,
+  sortByAmount,
+  sortByDate
+} from '../../actions/filters';
 
-test('should set up setStartDate filter object', () => {
-    const action = setStartDate(moment(0))
-    expect(action).toEqual({
-        type: 'SET_START_DATE',
-        date: moment(0)
-    })
-})
+test('should generate set start date action object', () => {
+  const action = setStartDate(moment(0));
+  expect(action).toEqual({
+    type: 'SET_START_DATE',
+    startDate: moment(0)
+  });
+});
 
-test('should set up setEndDate filter object', () => {
-    const action = setEndDate(moment(0))
-    expect(action).toEqual({
-        type: 'SET_END_DATE',
-        date: moment(0)
-    })
-})
+test('should generate set end date aciton object', () => {
+  const action = setEndDate(moment(0));
+  expect(action).toEqual({
+    type: 'SET_END_DATE',
+    endDate: moment(0)
+  });
+});
 
-test('should set up setTextFilter filter object', () => {
-    const action = setTextFilter("abc")
-    expect(action).toEqual({
-        type: 'SET_TEXT_FILTER',
-        filter: "abc"
-    })
-})
+test('should generate set text filter object with text value', () => {
+  const text = 'Something in';
+  const action = setTextFilter(text);
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER',
+    text
+  });
+});
 
-test('should set up setTextFilter filter default', () => {
-    const action = setTextFilter()
-    expect(action).toEqual({
-        type: 'SET_TEXT_FILTER',
-        filter: ""
-    })
-})
-test('should set up sortBy filter', () => {
-    const action = sortBy("abc")
-    expect(action).toEqual({
-        type: 'SORT_BY',
-        value: "abc"
-    })
-})
+test('should generate set text filter object with default', () => {
+  const action = setTextFilter();
+  expect(action).toEqual({
+    type: 'SET_TEXT_FILTER',
+    text: ''
+  });
+});
 
-test('should set up setTextFilter filter default', () => {
-    const action = setTextFilter()
-    expect(action).toEqual({
-        type: 'SET_TEXT_FILTER',
-        filter: ""
-    })
-})
-test('should set up sortBy filter', () => {
-    const action = sortBy("abc")
-    expect(action).toEqual({
-        type: 'SORT_BY',
-        value: "abc"
-    })
-})
+test('should generate action object for sort by date', () => {
+  expect(sortByDate()).toEqual({ type: 'SORT_BY_DATE' });
+});
 
-test('should set up setTextFilter filter default', () => {
-    const action = setTextFilter()
-    expect(action).toEqual({
-        type: 'SET_TEXT_FILTER',
-        filter: ""
-    })
-})
-test('should set up sortBy filter default', () => {
-    const action = sortBy()
-    expect(action).toEqual({
-        type: 'SORT_BY',
-        value: "date"
-    })
-})
+test('should generate action object for sort by amount', () => {
+  expect(sortByAmount()).toEqual({ type: 'SORT_BY_AMOUNT' });
+});
